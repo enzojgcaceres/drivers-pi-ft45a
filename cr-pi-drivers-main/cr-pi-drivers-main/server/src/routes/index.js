@@ -1,6 +1,6 @@
 const { Router } = require("express");
 const driversRouter = require("./driversRouter");
-const teamsRouter = require("/.teamsRouter");
+const teamsRouter = require("./teamsRouter");
 
 const router = Router();
 
