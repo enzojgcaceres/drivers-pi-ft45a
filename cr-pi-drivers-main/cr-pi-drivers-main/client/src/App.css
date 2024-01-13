@@ -5,13 +5,13 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
+.fondo {
+  height: 16em;
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
 }
-.logo:hover {
+.fondo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
 .logo.react:hover {
@@ -38,5 +38,5 @@
 }
 
 .read-the-docs {
-  color: #888;
+  color: #776969;
 }

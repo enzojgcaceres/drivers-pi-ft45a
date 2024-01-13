@@ -1,0 +1,24 @@
+.nav-container {
+  
+    display: flex;
+    align-items: center;
+    background-color: #0000006c;
+  
+  }
+  
+  .buscador {
+    display: flex;
+  
+    /* align-items: center; */
+    flex: 1;
+    margin: 1rem;
+    border: 10px;
+   
+  }
+  .buscador-click {
+    margin-right: 10px;
+  
+    border-color: #ffffff;
+    text-decoration: none;
+    color: rgb(244, 96, 170);
+  }

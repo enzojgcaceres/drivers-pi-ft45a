@@ -1,11 +1,11 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: rgba(170, 79, 79, 0.6);
+  background-color: #c53d3d;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -24,6 +24,8 @@ a:hover {
 }
 
 body {
+  background-image: url('/images/pexels-samuil-ivanov-18786276.jpg');
+  background-size:cover;
   margin: 0;
   display: flex;
   place-items: center;
@@ -48,7 +50,7 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: #063bf7;
 }
 button:focus,
 button:focus-visible {
@@ -57,11 +59,11 @@ button:focus-visible {
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
+    color: #435f78;
     background-color: #ffffff;
   }
   a:hover {
-    color: #747bff;
+    color: #d697f0;
   }
   button {
     background-color: #f9f9f9;

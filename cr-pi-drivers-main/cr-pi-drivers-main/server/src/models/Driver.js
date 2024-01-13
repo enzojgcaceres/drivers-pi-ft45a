@@ -4,11 +4,16 @@ const { DataTypes, UUIDV4 } = require('sequelize');
 module.exports = (sequelize) => {
   // defino el modelo
   sequelize.define('Driver', {
+    // id: {
+    //   type: DataTypes.UUID,
+    //   defaultValue: UUIDV4,
+    //   primaryKey: true
+    // },
     id: {
-      type: DataTypes.UUID,
-      defaultValue: UUIDV4,
+      type: DataTypes.INTEGER,
       allowNull: false,
-      primaryKey: true
+      autoIncrement: true,
+      primaryKey: true,
     },
     forename: {
       type: DataTypes.STRING,
@@ -34,11 +39,7 @@ module.exports = (sequelize) => {
       type: DataTypes.DATE,
       allowNull: false,
     },
-    createInDb: {
-      type: DataTypes.BOOLEAN,
-      defaultValue: true,
-    },
   },
-  { timestamps: false, freezeTableName: true }
+  { timestamps: false }
   );
 };
