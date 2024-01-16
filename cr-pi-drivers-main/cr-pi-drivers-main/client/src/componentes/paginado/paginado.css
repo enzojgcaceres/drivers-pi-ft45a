@@ -12,9 +12,9 @@
     border-radius: 6px;
     cursor: pointer;
     transition: all 0.3s ease;
-    background: transparent;
+    background:transparent;
   
-    border-color: #000000;
-    text-decoration: none;
-    color: black;
+    border-color: #63f608;
+    text-decoration: solid;
+    color: rgb(45, 254, 3);
   }

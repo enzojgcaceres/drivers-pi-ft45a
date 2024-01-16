@@ -1,6 +1,49 @@
-.landin {
+/* .landin {
+    background-image: url('/images/f1-ferrari.jpg');
+    background-position: center;
+    background-size:cover ;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position:static;
+  }
+  .landin.container {
+    color: white;
+    font-size: 50px;
+    text-align: center;
     font-weight: bold;
-    color: #72b61954;
+    position: absolute;
+    top: .75%;
+    background-color: transparent;
+  }
+  
+  .landin.button {
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    position:absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .landin.button:hover {
+    background-color: rgba(29, 26, 26, 0.5);
+    color: rgb(40, 236, 5);
+  }
+  
+  .landin.button-container {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+   */
+   .landin {
+    font-weight: bold;
+    color: #04070054;
     font-family: "Arial";
     font-size: 100px;
     text-transform: uppercase;
@@ -14,7 +57,7 @@
   
   .landin.button {
     margin-top: 200px;
-    background-color: black;
+    background-color: rgba(1, 1, 1, 0.5);
     color: white;
     border: 2px solid black;
     padding: 80px 80px;
@@ -27,8 +70,8 @@
   }
   
   .landin.button:hover {
-    background-color: rgba(29, 26, 26, 0);
-    color: black;
+    background-color: rgba(235, 169, 54, 0.5);
+    color: rgba(36, 36, 40, 0.926);
   }
   
   .landin.button-container {
@@ -36,7 +79,9 @@
     margin-bottom: 1rem;
   }
   
-  /* body {
-    background-image: url("fondo.jpeg");
-    background-size: cover;
-  } */
+  body {
+    background-image: url("/images/f1-ferrari.jpg");
+    background-position: center;
+    background-size:cover;
+    background-attachment: fixed;
+  }

@@ -9,7 +9,7 @@
   .buscador {
     display: flex;
   
-    /* align-items: center; */
+    align-items: center;
     flex: 1;
     margin: 1rem;
     border: 10px;
@@ -17,8 +17,7 @@
   }
   .buscador-click {
     margin-right: 10px;
-  
     border-color: #ffffff;
-    text-decoration: none;
-    color: rgb(244, 96, 170);
+    text-decoration:solid;
+    color: rgb(194, 21, 210);
   }

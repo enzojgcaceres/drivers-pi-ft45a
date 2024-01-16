@@ -1,19 +1,14 @@
-const { DataTypes, UUIDV4 } = require('sequelize');
+const { DataTypes } = require('sequelize');
 // Exportamos una funcion que define el modelo
 // Luego le injectamos la conexion a sequelize.
 module.exports = (sequelize) => {
   // defino el modelo
   sequelize.define('Driver', {
-    // id: {
-    //   type: DataTypes.UUID,
-    //   defaultValue: UUIDV4,
-    //   primaryKey: true
-    // },
     id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      autoIncrement: true,
+      type: DataTypes.UUID,
       primaryKey: true,
+      allowNull: false,
+      defaultValue: DataTypes.UUIDV4,
     },
     forename: {
       type: DataTypes.STRING,

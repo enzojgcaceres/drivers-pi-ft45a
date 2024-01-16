@@ -7,6 +7,7 @@ import {
   ORDER_DOB,
   FILTRO_POR_DRIVER,
   GET_TEAMS,
+  ADD_DRIVER,
 } from "../actions";
 
 let initialState = {
@@ -25,6 +26,11 @@ function rootReducer(state = initialState, action) {
         allDrivers: action.payload,
         backUp: action.payload,
       };
+    case ADD_DRIVER:
+      return {
+        ...state,
+        allDrivers:[...state.allDrivers, action.payload]
+      }
     case GET_DETAIL:
       return {
         ...state,

@@ -20,7 +20,7 @@ import {
     const allDrivers = useSelector((state) => state.allDrivers);
     const [search, setSearch] = useState("");
     const [currentPage, setCurrentPage] = useState(1);
-    const [postPerPage, setPostPerPage] = useState(9);
+    const [postPerPage] = useState(8);
   
     const lastPostIndex = currentPage * postPerPage;
     const firstPostIndex = lastPostIndex - postPerPage;
@@ -61,6 +61,10 @@ import {
       dispatch(filtradoPorDriver(e.target.value));
       setCurrentPage(1);
     };
+
+    const handlePageChange = (newPage) => {
+      setCurrentPage(newPage);
+    }
   
     return (
       <div className="body">
@@ -79,7 +83,7 @@ import {
           <Paginado
             totalPosts={allDrivers.length}
             postPerPage={postPerPage}
-            setCurrentPage={setCurrentPage}
+            setCurrentPage={handlePageChange}
             currentPage={currentPage}
           />
         </div>

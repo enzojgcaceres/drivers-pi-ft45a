@@ -26,6 +26,7 @@ function Create() {
     description: "",
     teams: [],
   });
+ 
   const [errors, setErrors] = useState({
     forename: "Nombre requerido",
     surname: "Apellido requerido",
@@ -35,6 +36,8 @@ function Create() {
     description: "Descripcion",
     teams: "Equipos",
   });
+
+  
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -53,19 +56,33 @@ function Create() {
     }));
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    dispatch(postDrivers(state));
-    setState({
-      forename: "",
-      surname: "",
-      nationality: "",
-      image: "",
-      dob: "",
-      description: "",
-      teams: [],
-    });
-  };
+
+    try {
+      const response = await dispatch(postDrivers(state));
+
+      if(response && response.payload) {
+        dispatch(getDrivers());
+      
+      console.log("driver creado", response.driver)
+
+        setState({
+          forename: "",
+          surname: "",
+          nationality: "",
+          image: "",
+          dob: "",
+          description: "",
+          teams: [],
+        });
+      }
+      
+      alert("conductor creado exitosamente")
+    } catch (error) {
+      console.error("Error al crear el conductor", error)
+    }
+  }  
 
   const handleSelect = (event) => {
     const selectedOptions = Array.from(event.target.selectedOptions);
@@ -86,14 +103,17 @@ function Create() {
   };
 
   return (
-    <div className="body">
-      <form onSubmit={handleSubmit}>
+    <div className="create-container form div">
+      <form 
+        className="create-container form"
+        onSubmit={handleSubmit}>
         <div className="home">
           <Link to="/home">Home</Link>
         </div>
-        <div>
-          <label>Nombre</label>
+        <div className="create-container form div" >
+          <label className="create-container form label" >Nombre</label>
           <input
+            className="create-container form input"
             type="text"
             name="forename"
             value={state.forename}
@@ -101,9 +121,10 @@ function Create() {
           />
           {errors.forename && <span>{errors.forename}</span>}
         </div>
-        <div>
-          <label>Apellido</label>
+        <div className="create-container form div" >
+          <label className="create-container form label" >Apellido</label>
           <input
+            className="create-container form input"
             type="text"
             name="surname"
             value={state.surname}
@@ -111,9 +132,10 @@ function Create() {
           />
           {errors.surname && <span>{errors.surname}</span>}
         </div>
-        <div>
-          <label>Nacionalidad</label>
+        <div className="create-container form div" >
+          <label className="create-container form label" >Nacionalidad</label>
           <input
+            className="create-container form input"
             type="text"
             name="nationality"
             value={state.nationality}
@@ -121,9 +143,10 @@ function Create() {
           />
           {errors.nationality && <span>{errors.nationality}</span>}
         </div>
-        <div>
-          <label>Imagen</label>
+        <div className="create-container form div" >
+          <label className="create-container form label" >Imagen</label>
           <input
+            className="create-container form input"
             type="url"
             name="image"
             value={state.image}
@@ -131,9 +154,10 @@ function Create() {
           />
           {errors.image && <span>{errors.image}</span>}
         </div>
-        <div>
-          <label>Fecha de Nacimiento</label>
+        <div className="create-container form div" >
+          <label className="create-container form label" >Fecha de Nacimiento</label>
           <input
+            className="create-container form input"
             type="date"
             name="dob"
             value={state.dob}
@@ -141,9 +165,10 @@ function Create() {
           />
           {errors.dob && <span>{errors.dob}</span>}
         </div>
-        <div>
-          <label>Descripcion</label>
+        <div className="create-container form div" >
+          <label className="create-container form label" >Descripcion</label>
           <input
+            className="create-container form input"
             type="text"
             name="description"
             value={state.description}
@@ -151,20 +176,21 @@ function Create() {
           />
           {errors.description && <span>{errors.description}</span>}
         </div>
-        <label>Equipos:</label>
+        <label className="create-container form label" >Equipos:</label>
         <select
+          className="create-container form select"
           name="teams"
           value={state.teams}
           onChange={handleSelect}
           multiple
         >
           {teamsTraer?.map((t) => (
-            <option title={t.teams} value={t.id} key={t.id}>
+            <option title={t.teams} value={t.id} key={t.id || t.teams}>
               {t.teams}
             </option>
           ))}
         </select>
-        <div>
+        <div className="create-container form div">
           <button type="submit">Enviar</button>
         </div>
       </form>

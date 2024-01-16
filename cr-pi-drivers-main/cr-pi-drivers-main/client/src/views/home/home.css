@@ -1,5 +1,6 @@
 body {
-    background-size: cover;
+    background-image: url('/images/pexels-samuil-ivanov-19178581.jpg');
+    background-size:cover ;
     background-color: rgb(142, 194, 44, 0.7);
     background-attachment: fixed;
     display: flex;

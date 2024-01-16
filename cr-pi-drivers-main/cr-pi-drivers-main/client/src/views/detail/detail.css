@@ -3,9 +3,10 @@
     width: 60%;
     height: 0%;
     padding: 20px;
-    background-color: rgba(242, 164, 214, 0.6);
-    text-decoration: none;
-    color: rgb(48, 47, 47);
+    background-color: rgba(213, 168, 197, 0.6);
+    box-shadow: 0 0 20px rgba(219, 26, 244, 0.3); 
+    text-decoration:solid;
+    color: rgb(0, 0, 0);
     border-radius: 10px;
     justify-content: center;
     margin: 50px auto 0;
@@ -20,7 +21,7 @@
   .gohome{
     
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: rgb(151, 255, 6);
     font-size: 20px;
     text-transform: uppercase;
     display: flex;

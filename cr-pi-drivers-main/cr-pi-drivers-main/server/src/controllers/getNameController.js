@@ -22,8 +22,8 @@ const getDriverDB = async () => {
 const getDriverApi = async () => {
   try {
     const peticion = (
-      await axios(`http://localhost:5000/drivers?limit=15`)
-    ).data.slice(0, 15);
+      await axios(`http://localhost:5000/drivers`)
+    ).data //.slice(0, 40);
 
     const apiInfoMap = peticion.map((driver) => {
       return {
@@ -43,18 +43,19 @@ const getDriverApi = async () => {
   }
 };
 
-const getNameController = async (forename) => {
+const getNameController = async (query) => {
   try {
     const driverDB = await getDriverDB(); // todos los usuarios de la DB
     const driverApi = await getDriverApi(); // todos los usuarios de la API
     const allDrivers = [...driverDB, ...driverApi]; // todos los USUARIOS
 
-    if (forename) {
-      const filterDriver = allDrivers.filter((driver) =>
-        driver.forename.toLowerCase().includes(forename.toLowerCase())
+
+    if (query) {
+      const searchResult = allDrivers.filter((driver) =>
+        driver.forename.toLowerCase().includes(query.toLowerCase())
       );
-      if (filterDriver.length) {
-        return filterDriver;
+      if (searchResult.length) {
+        return searchResult;
       } else {
         throw new Error(
           "No se encontraron conductores con el forename especificado."

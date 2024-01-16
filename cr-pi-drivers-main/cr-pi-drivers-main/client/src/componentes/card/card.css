@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     
-    background-color: rgba(89, 95, 36, 0.7);
+    background-color: rgba(108, 165, 50, 0.5);
     border: 2px solid rgb(0, 0, 0);
     border-radius: 5px;
     padding: 25px;
@@ -10,8 +10,12 @@
     -moz-osx-font-smoothing: grayscale;
     backface-visibility: hidden;
     transform: translateZ(0);
-    transition: transform 0.25s ease-out;
+    transition: transform 0.25s ease-out, box-shadow 0.3s ease-out;
     margin-top: 1rem;
+  }
+  .card:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); 
   }
   .card img {
     width: 100%;

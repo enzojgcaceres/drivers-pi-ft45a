@@ -1,4 +1,3 @@
-const { Driver } = require("../db");
 const { postDriversController } = require("../controllers/postDriversController");
 
 const postDriversHandler = async (req, res) => {

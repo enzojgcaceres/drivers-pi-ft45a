@@ -7,7 +7,6 @@ function Detail() {
   const { id } = useParams();
   const dispatch = useDispatch();
   const detail = useSelector((state) => state.detail);
-  console.log( "Estoy aqui en el detail" ); //! ATENCION
 
   useEffect(() => {
   

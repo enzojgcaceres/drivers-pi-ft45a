@@ -7,7 +7,7 @@ function Landing() {
         <div className="landin">
         <div className="button-container"></div>
         <Link to="/home">
-          <button className="landin button">Get Started</button>
+          <button className="landin button">Bienvenidos fans! Click para viajar!</button>
         </Link>
       </div>
     );

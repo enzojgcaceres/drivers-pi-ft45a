@@ -7,7 +7,7 @@ function Navbar({ handleSubmit, handleChange }) {
         <input
           className="buscador-click"
           onChange={handleChange}
-          placeholder="Busqueda"
+          placeholder="Busqueda por nombre!"
         />
         <button className="buscador-click" onClick={handleSubmit}>
           Buscar

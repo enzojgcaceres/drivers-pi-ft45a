@@ -9,12 +9,12 @@ export const ORDER_NAME = "ORDER_NAME";
 export const ORDER_DOB = "ORDER_DOB";
 export const FILTRO_POR_DRIVER = "FILTRO_POR_DRIVER";
 export const GET_TEAMS = "GET_TEAMS";
+export const ADD_DRIVER = "ADD_DRIVER"
 
 export const getDrivers = () => {
   return async function (dispatch) {
     try {
       const response = await axios("http://localhost:3001/drivers");
-     // console.log("aca", response);
       return dispatch({
         type: GET_DRIVERS,
         payload: response.data,
@@ -54,13 +54,24 @@ export const postDrivers = (info) => {
         info.teams.length === 0
       ) {
         throw new Error("Faltan datos");
-      }
+      };
 
+      
       const response = await axios.post("http://localhost:3001/drivers", info);
+
+      dispatch(addDriver(response.data))
+
       alert("Corredor creado");
     } catch (error) {
       alert(error.message);
     }
+  };
+};
+
+export const addDriver = (driver) => {
+  return {
+    type: ADD_DRIVER,
+    payload: driver
   };
 };
 

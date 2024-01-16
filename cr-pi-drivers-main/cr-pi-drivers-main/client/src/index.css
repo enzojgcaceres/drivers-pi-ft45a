@@ -16,7 +16,7 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #e9ee7e;
   text-decoration: inherit;
 }
 a:hover {
@@ -24,8 +24,8 @@ a:hover {
 }
 
 body {
-  background-image: url('/images/pexels-samuil-ivanov-18786276.jpg');
-  background-size:cover;
+  /* background-image: url('/images/pexels-samuil-ivanov-19178581.jpg');
+  background-size:cover ; */
   margin: 0;
   display: flex;
   place-items: center;
@@ -45,7 +45,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #5f4a4a;
   cursor: pointer;
   transition: border-color 0.25s;
 }
