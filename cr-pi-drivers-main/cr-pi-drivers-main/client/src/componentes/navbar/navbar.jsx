@@ -13,12 +13,10 @@ function Navbar({ handleSubmit, handleChange }) {
           Buscar
         </button>
       </form>
-   
-   
-        <Link className="buscador-click" to="/create">
-          <p>Crear/create</p>
+
+        <Link className="link-boton" to="/create">
+          <p>Crear Piloto</p>
         </Link>
-     
     </div>
   );
 }

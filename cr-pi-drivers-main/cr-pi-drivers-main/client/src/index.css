@@ -24,8 +24,6 @@ a:hover {
 }
 
 body {
-  /* background-image: url('/images/pexels-samuil-ivanov-19178581.jpg');
-  background-size:cover ; */
   margin: 0;
   display: flex;
   place-items: center;

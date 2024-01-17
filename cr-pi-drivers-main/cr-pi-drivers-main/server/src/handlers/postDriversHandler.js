@@ -15,7 +15,7 @@ const postDriversHandler = async (req, res) => {
 
    return res.status(201).json(response);
   } catch (error) {
-    res.status(404).send({ error: error.message });
+    res.status(409).send({ error: error.message });
   }
 };
 

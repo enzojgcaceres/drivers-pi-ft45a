@@ -87,13 +87,12 @@ function Create() {
   const handleSelect = (event) => {
     const selectedOptions = Array.from(event.target.selectedOptions);
     const selectedValues = selectedOptions.map((option) =>
-      Number(option.value)
+      option.value
     );
     const selectedNames = selectedOptions.map((option) => option.title);
     setState((prevState) => ({
       ...prevState,
       teams: selectedValues,
-      teamsName: selectedNames.join(", "),
     }));
 
     setErrors((prevErrors) => ({

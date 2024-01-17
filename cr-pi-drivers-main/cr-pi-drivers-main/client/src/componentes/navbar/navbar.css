@@ -1,6 +1,7 @@
 .nav-container {
   
     display: flex;
+    border-radius: 3px;
     align-items: center;
     background-color: #0000006c;
   
@@ -8,7 +9,6 @@
   
   .buscador {
     display: flex;
-  
     align-items: center;
     flex: 1;
     margin: 1rem;
@@ -17,7 +17,22 @@
   }
   .buscador-click {
     margin-right: 10px;
+    border-radius: 6px;
     border-color: #ffffff;
     text-decoration:solid;
     color: rgb(194, 21, 210);
+  }
+  .link-boton {
+    position: relative;
+    margin-right: 10px;
+    text-transform: capitalize;
+    text-decoration: none;
+    color: rgb(10, 10, 10);
+    font-size: 16px; /* Modificado el tamaño de la letra */
+    transition: color 0.3s ease-in-out, font-size 0.3s ease-in-out;
+  }
+  
+  .link-boton:hover {
+    color: #ffa305; /* Cambiado el color al hacer hover */
+    font-size: 18px; /* Modificado el tamaño de la letra al hacer hover */
   }

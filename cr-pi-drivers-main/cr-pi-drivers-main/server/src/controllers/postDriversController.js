@@ -1,5 +1,4 @@
-const { Driver, Team } = require("../db");
-const axios = require("axios");
+const { Driver } = require("../db");
 
 const postDriversController = async (
   forename,
@@ -13,11 +12,11 @@ const postDriversController = async (
   try {
     if (!forename || !surname || !description || !image || !nationality || !dob)
       throw new Error("Data missing");
-
-    let driverDB = await Driver.findAll();
-    const id = 508 + driverDB.length;
+    console.log("texto")
+    // let driverDB = await Driver.findAll();
+    // const id = 508 + driverDB.length;
     const createDriver = await Driver.create({
-      id: id,
+      // id,
       forename,
       surname,
       description,
@@ -26,11 +25,17 @@ const postDriversController = async (
       dob,
     });
 
+    
+    
+      
+    // const teamsEntity = await teams.findByPk(teams[0])
+
+
     await createDriver.addTeams(teams);
 
     return createDriver;
   } catch (error) {
-    return { error: error.message };
+    throw error;
   }
 };
 

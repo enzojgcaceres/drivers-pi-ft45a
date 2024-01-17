@@ -9,6 +9,7 @@
   }
   .body {
     background-color: rgba(147, 33, 175, 0.7);
+    border-radius: 5px;
     color: #000000;
     padding: 10px 20px;
     border: none;

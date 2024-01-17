@@ -20,8 +20,8 @@
   
   .gohome{
     
-    text-decoration: none;
-    color: rgb(151, 255, 6);
+    text-decoration:solid;
+    color: rgb(6, 2, 2);
     font-size: 20px;
     text-transform: uppercase;
     display: flex;
