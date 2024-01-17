@@ -15,6 +15,6 @@ module.exports = (sequelize) => {
         allowNull: true,
       },
     },
-    { timestamps: false} // crear tabla en singular
+    { timestamps: false} 
   );
 };

@@ -23,7 +23,7 @@ const getDriverApi = async () => {
   try {
     const peticion = (
       await axios(`http://localhost:5000/drivers`)
-    ).data //.slice(0, 40);
+    ).data.slice(0, 15);
 
     const apiInfoMap = peticion.map((driver) => {
       return {

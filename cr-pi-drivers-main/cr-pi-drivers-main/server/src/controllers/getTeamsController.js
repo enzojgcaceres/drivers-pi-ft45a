@@ -43,7 +43,7 @@ const saveTeams = async () => {
 
       if (!allTeams) throw new Error("No hay equipos");
 
-      // Verificar y filtrar equipos duplicados
+      
       const uniqueTeams = allTeams.filter(
         (team) => !dbTeams.some((dbTeam) => dbTeam.name === team.teams)
       );
