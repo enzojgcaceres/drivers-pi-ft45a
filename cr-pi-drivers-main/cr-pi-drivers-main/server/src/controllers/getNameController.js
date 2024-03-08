@@ -45,10 +45,16 @@ const getDriverApi = async () => {
 
 const getNameController = async (query) => {
   try {
-    const driverDB = await getDriverDB(); // todos los usuarios de la DB
+    const driverDB = await getDriverDB() // todos los usuarios de la DB
+    // console.log(driverDB)
+    // const driverSan = driverDB.toJSON() 
+    // .map(item => { 
+    //   item["teams"] = item.Teams.map((item) => item.teams).join(', ')
+    //   return item;
+    // })
     const driverApi = await getDriverApi(); // todos los usuarios de la API
     const allDrivers = [...driverDB, ...driverApi]; // todos los USUARIOS
-
+    //console.log(allDrivers)
 
     if (query) {
       const searchResult = allDrivers.filter((driver) =>

@@ -1,6 +1,12 @@
 import { Link } from "react-router-dom";
 import "./navbar.css";
+
+
+
 function Navbar({ handleSubmit, handleChange }) {
+
+
+
   return (
     <div className="nav-container">
       <form className="buscador">

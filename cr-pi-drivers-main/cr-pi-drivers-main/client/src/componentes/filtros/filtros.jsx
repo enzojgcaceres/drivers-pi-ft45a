@@ -7,6 +7,7 @@ function Filtros({ handleSortName, handleSortDob, handleFilter, allDrivers }) {
     })
     .filter((team, index, teams) => teams.indexOf(team) === index);
 
+
   return (
     <div className="filtros">
       <label className="button">

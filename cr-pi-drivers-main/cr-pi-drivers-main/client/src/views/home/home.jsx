@@ -61,7 +61,9 @@ import {
       dispatch(filtradoPorDriver(e.target.value));
       setCurrentPage(1);
     };
-
+    const handleFiltrarEquipos = (e) => {
+      dispatch(filtrarPorEquipos(e.target.value))
+    };
     const handlePageChange = (newPage) => {
       setCurrentPage(newPage);
     }
@@ -69,7 +71,10 @@ import {
     return (
       <div className="body">
         <div>
-          <Navbar handleSubmit={handleSubmit} handleChange={handleChange} />
+          <Navbar 
+            handleSubmit={handleSubmit} 
+            handleChange={handleChange} 
+            handleFiltrarPorEquipos={handleFiltrarEquipos} />
         </div>
         <div>
           <Filtros

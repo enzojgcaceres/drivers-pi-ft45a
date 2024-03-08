@@ -9,7 +9,8 @@ export const ORDER_NAME = "ORDER_NAME";
 export const ORDER_DOB = "ORDER_DOB";
 export const FILTRO_POR_DRIVER = "FILTRO_POR_DRIVER";
 export const GET_TEAMS = "GET_TEAMS";
-export const ADD_DRIVER = "ADD_DRIVER"
+export const ADD_DRIVER = "ADD_DRIVER";
+
 
 export const getDrivers = () => {
   return async function (dispatch) {
